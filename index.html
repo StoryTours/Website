@@ -8,11 +8,11 @@
     <!-- link rel="preload" as="html" type="text/html" href="menu.html" -->
     <link rel="stylesheet" href="main.css">
     <!-- script scr=menu.json async></script -->
- </head>
+</head>
   <body>
     <header>
         <h1>Header</h1>
-        <script type="text/javascript" scr=menu.js></script>
+        <script type="text/javascript" src=menu.js></script>
     </header>
     <hr>   
     <nav id="menuId">
@@ -49,12 +49,14 @@
     </footer>
     <div id="spezDIV"></div>
     <script>
-        var extern = document.getElementsByTagName("link")[0].menuHTML;
+    /*    var extern = document.getElementsByTagName("link")[0].menuHTML;
         var absatz = extern.getElementsByTagName("p")[0];
         var menuVar = document.getElementsByTagId("menuID");
         menuVar.appendChild = "<p>Menu</p>";
-        document.getElementById("spezDIV").innerHTML = "Hallo Footer";
-        document.getElementById("spezDIV").innerHTML = "Halli hallo!";
+    */    document.getElementById("spezDIV").textContent = "Hallo Footer";
+        document.getElementById("spezDIV").textContent = "Halli hallo!";
+        document.writeln("Versuchen wir's mal so...");
+
     </script>
     <!--
     window.addEventListener("load", function() {
