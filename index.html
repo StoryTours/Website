@@ -1,1 +1,65 @@
-Test für Website
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meine Testseite</title>
+    <link rel="menuHTML" href="menu.html">
+    <!-- link rel="preload" as="html" type="text/html" href="menu.html" -->
+    <link rel="stylesheet" href="main.css">
+    <script scr=menu.json async></script>
+ </head>
+  <body>
+    <header>
+        <h1>Header</h1>
+        <script type="text/javascript" scr=menu.js></script>
+    </header>
+    <hr>   
+    <nav id="menuId">
+        <!-- object data="menu.html" type="text/html" height=""></object -->
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+        </ul>
+        <!-- Ein Suchformular, mit dessen Hilfe man auch durch die Webseite navigieren kann -->    
+        <form>
+            <input type="search" name="q" placeholder="Search query">
+            <input type="submit" value="Go!">
+        </form>
+    </nav>
+    <hr>   
+    <main>
+        <article>
+            <h1>Test für Website</h1>
+            <p>Text text text.</p>
+        </article>
+        <!-- Der Inhalt für die Sidebar kann auch innerhalb des main-Elements stehen-->
+        <aside>
+            <h2>Related</h2>
+            <ul>
+              <li><a href="#">Oh I do like to be beside the seaside</a></li>
+              <li><a href="#">Oh I do like to be beside the sea</a></li>
+            </ul>
+        </aside>
+    </main>    
+    <hr>   
+    <!-- Hier ist unser Footer bzw. die Fußzeile, welche auch wieder auf allen Unterseiten angezeigt wird. -->
+    <footer id="footerID">
+        <p>©Copyright 2050 by nobody. All rights reversed.</p>
+    </footer>
+    <div id="spezDIV"></div>
+    <script>
+        var extern = document.getElementsByTagName("link")[0].menuHTML;
+        var absatz = extern.getElementsByTagName("p")[0];
+        var menuVar = document.getElementsByTagId("menuID");
+        menuVar.appendChild = "<p>Menu</p>";
+        document.getElementById("spezDIV").innerHTML = "Hallo Footer";
+
+    </script>
+    <!--
+    window.addEventListener("load", function() {
+            document.getElementsByTagName("nav")[0].replaceChild(extern.getElementsByTagName("div")[0], document.getElementsByTagName("div")[0]);
+        }, false);
+    -->
+    </body>
+</html>
